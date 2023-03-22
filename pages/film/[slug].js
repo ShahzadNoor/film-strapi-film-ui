@@ -98,7 +98,7 @@ const Film = ({ film, jwt, plot, error }) => {
               {film.attributes.reviews.length === 0 && (
                 <span>No reviews yet</span>
               )}
-              {film.attributes.reviews &&
+              {[film.attributes.reviews] &&
                 [film.attributes.reviews].map((review) => {
                   return (
                     <li key={review.id}>
